@@ -28,7 +28,7 @@ html {
 .content-container__raited,
 .cards-container {
     width: 327px;
-    margin: 16px 0;
+    margin: 16px auto;
 }
 
 .content-container__title {
@@ -51,7 +51,7 @@ html {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin: 34px 0;
+    margin: 34px auto;
 }
 
 .raited__card {
@@ -94,5 +94,17 @@ html {
     height: 40px;
     border-radius: 50%;
     margin-right: 12px;
+}
+
+.header__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info__title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: white;
 }
 
