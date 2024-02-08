@@ -16,10 +16,15 @@ html {
     font-size: 62.5%;
     font-family: 'League Spartan', sans-serif;
 }
+body{
+    background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+    background-position: top left, bottom right ;
+    background-repeat: no-repeat, no-repeat;
+    
+}
 
 .main {
     min-width: 360px;
-    max-width: 375px;
     margin: 0 auto;
     padding: 54px 0;
 }
@@ -76,11 +81,13 @@ html {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin-top: 46px;
 }
 
 .cards-container__card {
     width: 100%;
-    padding: 24px;
+    height: 234px;
+    padding: 32px;
     background-color: var(--Very-Dark-Magenta);
     border-radius: 8px;
 }
@@ -100,11 +107,96 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 12px;
 }
 
 .info__title {
     font-size: 1.7rem;
     font-weight: bold;
     color: white;
+    margin-bottom: 5px;
 }
 
+.info__verified-buyer {
+    font-size: 1.7rem;
+    color: var(--Soft-Pink);
+}
+
+.card__description {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    color: var(--White);
+    margin-top: 18px;
+}
+
+
+@media screen and (min-width: 800px) {
+    body{
+        display: grid;
+        place-content: center;
+        height: 100vh;
+        background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg'); 
+    }
+
+    .main {
+        width: 1120px;
+    }
+
+    .content-container,
+    .cards-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cards-container__card {
+        width: 350px;
+    }
+
+    .content-container__info {
+        margin: 0;
+    }
+
+    .content-container__title,
+    .content-container__description{
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .content-container__raited {
+        display: grid;
+        width: 540px;
+        margin: 0;
+    }
+
+    .raited__card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+        width: 445px;
+        height: 56px;
+    }
+
+    .raited__card--center {
+        justify-self: center;
+    }
+
+    .raited__card--right {
+        justify-self: right;
+    }
+
+    .cards-container {
+        height: 266px;
+    }
+
+    .cards-container__card--top {
+        align-self: flex-start;
+    }
+
+    .cards-container__card--buttom {
+        align-self: flex-end;
+    }
+}
